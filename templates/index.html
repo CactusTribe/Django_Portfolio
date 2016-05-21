@@ -123,10 +123,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+
 							<h1 class="text-center">Bienvenue.</h1>
-							<h2 class="text-center"><em>Welcome.</em></h2>
-							<br/>
 							<p class="lead text-center"><strong>Actuellement étudiant en licence d'informatique, ce site est conçu afin de répertorier mes projets universitaires et personnels auxquels j'ai pu participer, ou ceux que j'ai pu créer de toutes pièces.</strong></p>
+
+							<h2 class="text-center"><em>Welcome.</em></h2>
+							<p class="underlead text-center">Currently undergraduate in computer science, this website is designed in order to list my personal and university projects in which I participated, or those that I created by myself.</p>
 						</div>
 					</div>
 				</div>
@@ -189,7 +191,7 @@
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-{{ project.id }}" tabindex="-1" role="dialog" aria-labelledby="project-{{ project.id }}-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
+									<div class="modal-dialog modal-md">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -197,13 +199,13 @@
 											</div>
 											<div class="modal-body">
 
-												<h3>Description</h3>
+												<h3>Déscription</h3>
 												<div class="row">
 													<div class="col-md-6">
 														<p>{{ project.contenu }}</p>
 													</div>
 
-													<div class="col-md-4">
+													<div class="col-md-6">
 														{% for image in images|getImagesProject:project.id %}  
 												        <a {% if not forloop.first %} hidden {% endif %} href="{{ image.img.url }}" class="swipebox" title="{{ image.description }}" rel="{{ project.id }}">
 												          <img src="{{ image.img.url }}" />
@@ -212,14 +214,14 @@
 													</div>
 												</div>
 
-											  <h3>Outils utilisés : </h3>
+											  <h3>Outils utilisés</h3>
 										    <div class="block_icons_tools">
 										      {% for tool in project.tools.all %}
 										        <img class="logo_tools" src="{{ tool.icon.url }}"/>
 										      {% endfor %}
 										    </div>
 
-										    <h3>Resources : </h3>
+										    <h3>Ressources</h3>
 										    <div class="block_liens">
 										    {% for resource in resources %}
 										      {% if resource.project.id == project.id %}
@@ -303,7 +305,15 @@
 										</div>
 										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
-												POO, Java, Python, C, Symfony, NodeJS, HTML/CSS, BootStrap, Shell Linux/OSX.
+												<ul>
+													<li>POO</li>
+													<li>Java</li>
+													<li>Python</li>
+													<li>C</li>
+													<li>Symfony</li>
+													<li>BootSrap</li>
+													<li>Shell Unix</li>
+												</ul>
 											</div>
 										</div>
 									</div>
@@ -317,7 +327,15 @@
 										</div>
 										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 											<div class="panel-body">
-												Gestion d'un projet imprimé et coordination des différentes équipes, chaîne graphique, suite Adobe Photoshop, Adobe Illustrator, Adobe InDesign, logiciels de contrôle en amont des PDF et flux CIP4, EQuios TrueFlowSE et PitStopPro.
+												<ul>
+													<li>Gestion d'un projet imprimé et coordination des différentes équipes</li>
+													<li>Chaîne graphique</li>
+													<li>Adobe Photoshop</li>
+													<li>Adobe Illustrator</li>
+													<li>Adobe InDesign</li>
+													<li>Logiciels de contrôle en amont des PDF et flux CIP4</li>
+													<li>EQuios TrueFlowSE et PitStopPro</li>
+												</ul>
 											</div>
 										</div>
 									</div>
@@ -331,7 +349,15 @@
 										</div>
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
-												Electronique, programmation de micro-controleur (Arduino), hébergement Web, création d'interfaces graphiques (QtCreator), maintenance informatique intérmédiaire, Django.
+												<ul>
+													<li>Electronique</li>
+													<li>Programmation de micro-controleur (Arduino)</li>
+													<li>Hébergement Web</li>
+													<li>Création d'interfaces graphiques (QtCreator/Swing)</li>
+													<li>Maintenance informatique intérmédiaire</li>
+													<li>Django</li>
+													<li>OSX et Linux</li>
+												</ul>
 											</div>
 										</div>
 									</div>
