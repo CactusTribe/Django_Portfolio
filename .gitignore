@@ -1,3 +1,8 @@
 db.sqlite3
 media/images/*
 media/resources/*
+
+home/__pycache__/
+home/migrations/__pycache__/
+home/templatetags/__pycache__/
+portfolio/__pycache__/
