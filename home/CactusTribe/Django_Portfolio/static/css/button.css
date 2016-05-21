@@ -1,0 +1,64 @@
+#button a
+{
+  color: #8F8F8F;
+}
+
+#button a:hover
+{
+  color: #6B6B6B;
+  transition: all linear 0.1s;
+}
+
+#button
+{
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  padding: 6px;
+  margin: auto;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: solid #BDBDBD 1px;
+  transition:linear all 0.2s;
+  text-align: left;
+  font-size: 10.5pt;
+}
+
+#button:hover
+{
+  width: 200px;
+  height: 50px;
+  padding: 6px;
+  margin: auto;
+  margin-bottom: 10px;
+  text-decoration: none;
+  box-shadow: 0px 0px 6px #999;
+  border: solid #666 1px;
+  transition:linear all 0.1s;
+  text-align: left;
+  font-size: 10.5pt;
+}
+
+#icon_button
+{
+  float: left;
+  margin-right: 5px;
+  width: 36px;
+}
+
+#title_button
+{
+  width: 130px;
+  float: left;
+  margin-left: 5px;
+  font-family: open_sans_semiboldregular;
+}
+
+#subtitle_button
+{
+  width: 130px;
+  float: left;
+  margin-left: 5px;
+  font-family: open_sans_lightregular;
+  font-size: 0.8em;
+}
