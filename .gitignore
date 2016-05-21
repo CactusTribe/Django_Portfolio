@@ -6,3 +6,4 @@ home/__pycache__/
 home/migrations/__pycache__/
 home/templatetags/__pycache__/
 portfolio/__pycache__/
+portfolio/settings.py
