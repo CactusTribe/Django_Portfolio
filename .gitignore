@@ -1,6 +1,6 @@
 db.sqlite3
-media/images/*
-media/resources/*
+media/images/[^.]*
+media/resources/[^.]*
 
 home/__pycache__/
 home/migrations/__pycache__/
