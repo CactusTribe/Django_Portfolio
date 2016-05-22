@@ -92,10 +92,22 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
+
+												{% if langue == "fr" %}
+												<li class="active"><a href="#banner">Accueil</a></li>
+												<li><a href="#portfolio">Projets</a></li>
+												<li><a href="#about">A propos</a></li>
+												<li><a href="#contact">Contact</a></li>
+												<li><a href="/en/"><img width="20" src="{% static 'images/UK_flag.png' %}"/></a></li>
+
+												{% elif langue == "en" %}
 												<li class="active"><a href="#banner">Home</a></li>
 												<li><a href="#portfolio">Projects</a></li>
 												<li><a href="#about">About</a></li>
 												<li><a href="#contact">Contact</a></li>
+												<li><a href="/fr/"><img width="20" src="{% static 'images/FR_flag.png' %}"/></a></li>
+												{% endif %}
+
 											</ul>
 										</div>
 
@@ -124,11 +136,15 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 
+							{% if langue == "fr" %}
 							<h1 class="text-center">Bienvenue.</h1>
-							<p class="lead text-center"><strong>Actuellement étudiant en licence d'informatique, ce site est conçu afin de répertorier mes projets universitaires et personnels auxquels j'ai pu participer, ou ceux que j'ai pu créer de toutes pièces.</strong></p>
+							<p class="lead text-center"><em>Actuellement étudiant en licence d'informatique, ce site est conçu afin de répertorier mes projets universitaires et personnels auxquels j'ai pu participer, ou ceux que j'ai pu créer de toutes pièces.</em></p>
 
-							<h2 class="text-center"><em>Welcome.</em></h2>
-							<p class="underlead text-center">Currently undergraduate in computer science, this website is designed in order to list my personal and university projects in which I participated, or those that I created by myself.</p>
+							{% elif langue == "en" %}
+							<h1 class="text-center">Welcome.</h1>
+							<p class="lead text-center"><em>Currently undergraduate in computer science, this website is designed in order to list my personal and university projects in which I participated, or those that I created by myself.</em></p>
+							{% endif %}
+
 						</div>
 					</div>
 				</div>
@@ -140,7 +156,13 @@
 		<!-- ================ -->
 		<div class="section">
 			<div class="container">
-				<h1 class="text-center title" id="portfolio">Projets</h1>
+
+				{% if langue == "fr" %}
+					<h1 class="text-center title" id="portfolio">Projets</h1>
+				{% elif langue == "en" %}
+					<h1 class="text-center title" id="portfolio">Projects</h1>
+				{% endif %}
+
 				<div class="separator"></div>
 				<p class="lead text-center"></p>
 				<br>			
@@ -150,8 +172,13 @@
 						<!-- isotope filters start -->
 						<div class="filters text-center">
 							<ul class="nav nav-pills">
-								<li class="active"><a href="#" data-filter="*">All</a></li>
 
+								{% if langue == "fr" %}
+									<li class="active"><a href="#" data-filter="*">Tout</a></li>
+								{% elif langue == "en" %}
+									<li class="active"><a href="#" data-filter="*">All</a></li>
+								{% endif %}
+								
 								{% for categorie in categories %}
 									<li><a href="#" data-filter=".{{ categorie.nom }}">{{ categorie.nom }}</a></li>
 								{% endfor %}
@@ -199,7 +226,12 @@
 											</div>
 											<div class="modal-body">
 
-												<h4>Déscription</h4>
+												{% if langue == "fr" %}
+													<h4>Déscription</h4>
+												{% elif langue == "en" %}
+													<h4>Description</h4>
+												{% endif %}
+												
 												<div class="row">
 													<div class="col-md-6">
 														<p>{{ project.contenu }}</p>
@@ -214,14 +246,24 @@
 													</div>
 												</div>
 
-											  <h4>Outils utilisés</h4>
+												{% if langue == "fr" %}
+													<h4>Outils utilisés</h4>
+												{% elif langue == "en" %}
+													<h4>Used tools</h4>
+												{% endif %}
+											  
 										    <div class="block_icons_tools">
 										      {% for tool in project.tools.all %}
 										        <img class="logo_tools" src="{{ tool.icon.url }}"/>
 										      {% endfor %}
 										    </div>
 
-										    <h4>Ressources</h4>
+										    {% if langue == "fr" %}
+													<h4>Ressources</h4>
+												{% elif langue == "en" %}
+													<h4>Resources</h4>
+												{% endif %}
+										    
 										    <div class="block_liens">
 										    {% for resource in resources %}
 										      {% if resource.project.id == project.id %}
@@ -263,8 +305,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="about" class="title text-center">A propos</h1>
-						<p class="lead text-center">Mon cursus d'étudiant.</p>
+
+						{% if langue == "fr" %}
+							<h1 id="about" class="title text-center">A propos</h1>
+							<p class="lead text-center">Mon cursus d'étudiant.</p>
+						{% elif langue == "en" %}
+							<h1 id="about" class="title text-center">About me</h1>
+							<p class="lead text-center">My student curriculum.</p>
+						{% endif %}
+						
 						<div class="space"></div>
 						<div class="row">
 							<div class="col-md-6">
@@ -283,7 +332,13 @@
 							</div>
 						</div>
 						<div class="space"></div>
-						<h2>Expérience</h2>
+
+						{% if langue == "fr" %}
+							<h2>Expérience</h2>
+						{% elif langue == "en" %}
+							<h2>Experiences</h2>
+						{% endif %}
+						
 						<div class="row">
 							<div class="col-md-6">
 								<ul class="list-unstyled">
@@ -389,12 +444,24 @@
 			<!-- ================ -->
 			<div class="footer section">
 				<div class="container">
-					<h1 class="title text-center" id="contact">Contactez-moi</h1>
+
+					{% if langue == "fr" %}
+						<h1 class="title text-center" id="contact">Contactez-moi</h1>
+					{% elif langue == "en" %}
+						<h1 class="title text-center" id="contact">Contact me</h1>
+					{% endif %}
+					
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<p class="large">Pour me contacter, envoyez moi un email grâce à ce formulaire !</p>
+
+								{% if langue == "fr" %}
+									<p class="large">Pour me contacter, envoyez moi un email grâce à ce formulaire !</p>
+								{% elif langue == "en" %}
+									<p class="large">Contact me with this form or my email address !</p>
+								{% endif %}
+
 								<ul class="list-icons">
 									<li><i class="fa fa-envelope-o pr-10"></i> lefrancjoaquim@gmail.com</li>
 								</ul>
