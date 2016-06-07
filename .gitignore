@@ -8,3 +8,4 @@ home/templatetags/__pycache__/
 portfolio/__pycache__/
 portfolio/settings.py
 **/*.pyc
+portfolio/settings.py
