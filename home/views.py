@@ -13,6 +13,5 @@ def home(request, langue="fr"):
 	return render(request, 'index.html', locals())
 
 def github(request):
-	pwd = "huhgu"
-	#call(["git", "pull"])
+	call(["git", "pull"])
 	return render(request, 'github.html', locals())
