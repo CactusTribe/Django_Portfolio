@@ -1,3 +1,3 @@
 from subprocess import call
 
-call(['git', 'pull'])
+call(['touch', 'blabla'])
