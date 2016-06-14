@@ -14,6 +14,6 @@ def home(request, langue="fr"):
 	if langue == "fr" :
 		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/LED_RGB.py", "40", "178", "135"])
 	else:
-		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/LED_RGB.py", "190", "60", "34"])
+		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/LED_RGB.py", "190", "20", "24"])
 
 	return render(request, 'index.html', locals())
