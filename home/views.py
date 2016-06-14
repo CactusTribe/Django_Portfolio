@@ -12,8 +12,8 @@ def home(request, langue="fr"):
 	categories = Categorie.objects.all()
 
 	if langue == "fr" :
-		call(["py", "/home/pi/pyprojects/Divers/main.py"])
+		call(["python", "/home/pi/pyprojects/Divers/main.py"])
 	else:
-		call(["py", "/home/pi/pyprojects/Divers/main.py"])
+		call(["python", "/home/pi/pyprojects/Divers/main.py"])
 
 	return render(request, 'index.html', locals())
