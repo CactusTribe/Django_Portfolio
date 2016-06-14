@@ -13,7 +13,7 @@ def home(request, langue="fr"):
 
 	led1 = LED_RGB(1, 22,27,17)
 
-	if langue is "fr":
+	if langue == "fr" :
 		led1.setColor_RGB(40, 178, 135)
 	else:
 		led1.setColor_RGB(170, 78, 115)
