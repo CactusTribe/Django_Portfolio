@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from home.models import Categorie, Project, Image, Resource, IconFile
 
-from home.LED_RGB import LED_RGB
-import RPi.GPIO as GPIO
+#from home.LED_RGB import LED_RGB
 
 def home(request, langue="fr"):
 	projects = Project.objects.all().order_by("date")
@@ -12,13 +11,13 @@ def home(request, langue="fr"):
 	iconsfiles = IconFile.objects.all()
 	categories = Categorie.objects.all()
 
-	led1 = LED_RGB(1, 22,27,17)
+	#led1 = LED_RGB(1, 22,27,17)
 
 	#if langue is "fr":
-		led1.setColor_RGB(40, 178, 135)
+		#led1.setColor_RGB(40, 178, 135)
 	#else:
 	#	led1.setColor_RGB(170, 78, 115)
 
-	led1.blink(2)
+	#led1.blink(2)
 
 	return render(request, 'index.html', locals())
