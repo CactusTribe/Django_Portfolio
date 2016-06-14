@@ -12,8 +12,8 @@ def home(request, langue="fr"):
 	categories = Categorie.objects.all()
 
 	if langue == "fr" :
-		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/main.py"])
+		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/main.py", "40 178 135"])
 	else:
-		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/main.py"])
+		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/main.py", "180 140 34"])
 
 	return render(request, 'index.html', locals())
