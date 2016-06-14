@@ -360,22 +360,31 @@
 										</div>
 										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
+
 												<strong>Langages :</strong>
 												<ul>
 													<li>Java, Python, C, OCaml</li>
 													<li>SQL, Javascript, PHP, HTML/CSS</li>
 												</ul>
+
 												<strong>Frameworks / Libs :</strong>
 												<ul>
 													<li>Symfony, NodeJS, jQuery</li>
 													<li>BootSrap</li>
 													<li>SDL, SDL_gfx</li>
 												</ul>
+
 												<strong>Databases :</strong>
 												<ul>
 													<li>MySQL, phpMyAdmin, SQLite3</li>
 												</ul>
-												<strong>Autres :</strong>
+
+												{% if langue == "fr" %}
+													<strong>Autres :</strong>
+												{% elif langue == "en" %}
+													<strong>Other :</strong>
+												{% endif %}
+												
 												<ul>
 													<li>Shell Unix</li>
 												</ul>
@@ -393,6 +402,7 @@
 										</div>
 										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 											<div class="panel-body">
+
 												<strong>PAO, traitement de l'image :</strong>
 												<ul>
 													<li>Photoshop, Illustrator, InDesign, Acrobat</li>
@@ -402,10 +412,11 @@
 												<ul>
 													<li>Gestion d'un projet imprimé et coordination des différentes équipes</li>
 													<li>Chaîne graphique</li>
-													<li>Colorimétrie, calibration (PSO)</li>
+													<li>Colorimétrie, calibration, contrôle qualité (PSO)</li>
 													<li>Logiciels de contrôle en amont des PDF et flux CIP4</li>
 													<li>EQuios TrueFlowSE et PitStopPro</li>
 												</ul>
+
 											</div>
 										</div>
 									</div>
@@ -419,16 +430,32 @@
 										</div>
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
+
+												<strong>Web :</strong>
+												<ul>
+													<li>Django</li>
+													<li>Hébergement Web</li>
+													<li>Utilisation d'un moteur de recherche</li>
+												</ul>
+
+												<strong>Electronique :</strong>
 												<ul>
 													<li>Bases d'électronique</li>
 													<li>Programmation de micro-controleur (Arduino)</li>
-													<li>Hébergement Web</li>
+												</ul>
+
+												{% if langue == "fr" %}
+													<strong>Autres :</strong>
+												{% elif langue == "en" %}
+													<strong>Other :</strong>
+												{% endif %}
+												
+												<ul>
 													<li>Création d'interfaces graphiques (QtCreator/Swing)</li>
 													<li>Maintenance informatique intérmédiaire</li>
-													<li>Django</li>
-													<li>Utilisation d'un moteur de recherche (google)</li>
 													<li>OSX et Linux</li>
 												</ul>
+
 											</div>
 										</div>
 									</div>
