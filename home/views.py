@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from home.models import Categorie, Project, Image, Resource, IconFile
 
-from subprocess import call
+import subprocess
 
 def home(request, langue="fr"):
 	projects = Project.objects.all().order_by("date")
@@ -12,8 +12,8 @@ def home(request, langue="fr"):
 	categories = Categorie.objects.all()
 
 	if langue == "fr" :
-		call(["python", "/home/pi/pyprojects/Divers/main.py"])
+		subprocess.Popen(["python","/home/pi/pyprojects/Divers/main.py"])
 	else:
-		call(["python", "/home/pi/pyprojects/Divers/main.py"])
+		subprocess.Popen(["python","/home/pi/pyprojects/Divers/main.py"])
 
 	return render(request, 'index.html', locals())
