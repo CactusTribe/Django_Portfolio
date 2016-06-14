@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from home.models import Categorie, Project, Image, Resource, IconFile
 
-from home.LED_RGB import LED_RGB
-import thread
+from subprocess import call
 
 def home(request, langue="fr"):
 	projects = Project.objects.all().order_by("date")
@@ -12,14 +11,9 @@ def home(request, langue="fr"):
 	iconsfiles = IconFile.objects.all()
 	categories = Categorie.objects.all()
 
-	led1 = LED_RGB(1, 22,27,17)
-
 	if langue == "fr" :
-		led1.setColor_RGB(40, 178, 135)
+		call(["py", "~/pyprojects/Divers/main.py"])
 	else:
-		led1.setColor_RGB(170, 78, 115)
-
-	thread.start_new_thread(led1.blink(2), ())
-	
+		call(["py", "~/pyprojects/Divers/main.py"])
 
 	return render(request, 'index.html', locals())
