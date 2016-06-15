@@ -227,7 +227,13 @@
 
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-{{ project.id }}">{{ project.titre }}</a>
+
+									{% if langue == "fr" %}
+										<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-{{ project.id }}">{{ project.titre }}</a>
+									{% elif langue == "en" %}
+										<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-{{ project.id }}">{{ project.titre_traduction }}</a>
+									{% endif %}
+
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-{{ project.id }}" tabindex="-1" role="dialog" aria-labelledby="project-{{ project.id }}-label" aria-hidden="true">
@@ -265,10 +271,18 @@
 													</div>
 
 													<div class="col-md-6">
-														{% for image in images|getImagesProject:project.id %}  
-												        <a {% if not forloop.first %} hidden {% endif %} href="{{ image.img.url }}" class="swipebox" title="{{ image.description }}" rel="{{ project.id }}">
-												          <img src="{{ image.img.url }}" />
-												        </a>
+														{% for image in images|getImagesProject:project.id %} 
+
+																{% if langue == "fr" %} 
+													        <a {% if not forloop.first %} hidden {% endif %} href="{{ image.img.url }}" class="swipebox" title="{{ image.description }}" rel="{{ project.id }}">
+													          <img src="{{ image.img.url }}" />
+													        </a>
+												        {% elif langue == "en" %}
+												        	<a {% if not forloop.first %} hidden {% endif %} href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
+													          <img src="{{ image.img.url }}" />
+													        </a>
+												        {% endif %}
+
 												    {% endfor %}
 													</div>
 												</div>
