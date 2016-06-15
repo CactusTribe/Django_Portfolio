@@ -7,11 +7,17 @@ class Categorie(models.Model):
 	def __unicode__(self):
 		return self.nom
 
+	def __str__(self):
+		return self.nom
+
 class Tool(models.Model):
 	nom = models.CharField(max_length=30)
 	icon = models.ImageField(upload_to="icons_tools/")
 
 	def __unicode__(self):
+		return self.nom
+
+	def __str__(self):
 		return self.nom
 
 class Project(models.Model):
@@ -27,6 +33,9 @@ class Project(models.Model):
 	def __unicode__(self):
 		return self.titre
 
+	def __str__(self):
+		return self.titre
+
 class Image(models.Model):
 	titre = models.CharField(max_length=100)
 	description = models.TextField(null=True, max_length=250)
@@ -37,11 +46,17 @@ class Image(models.Model):
 	def __unicode__(self):
 		return self.titre
 
+	def __str__(self):
+		return self.titre
+
 class IconFile(models.Model):
 	nom = models.CharField(max_length=30)
 	icon = models.ImageField(upload_to="icons_files/")
 
 	def __unicode__(self):
+		return self.nom
+
+	def __str__(self):
 		return self.nom
 
 class Resource(models.Model):
@@ -52,6 +67,9 @@ class Resource(models.Model):
 	project = models.ForeignKey(Project)
 
 	def __unicode__(self):
+		return self.nom
+
+	def __str__(self):
 		return self.nom
 
 
