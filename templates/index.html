@@ -180,7 +180,11 @@
 								{% endif %}
 								
 								{% for categorie in categories %}
-									<li><a href="#" data-filter=".{{ categorie.nom }}">{{ categorie.nom }}</a></li>
+									{% if langue == "fr" %}
+										<li><a href="#" data-filter=".{{ categorie.nom }}">{{ categorie.nom }}</a></li>
+									{% elif langue == "en" %}
+										<li><a href="#" data-filter=".{{ categorie.nom_traduction }}">{{ categorie.nom_traduction }}</a></li>
+									{% endif %}
 								{% endfor %}
 
 							</ul>
@@ -193,7 +197,12 @@
 
 							{% for project in projects %}
 
-							<div class="col-sm-6 col-md-3 isotope-item {% for categorie in project.categories.all %}{{ categorie }} {% endfor %}">
+							{% if langue == "fr" %}
+								<div class="col-sm-6 col-md-3 isotope-item {% for categorie in project.categories.all %}{{ categorie.nom }} {% endfor %}">
+							{% elif langue == "en" %}
+								<div class="col-sm-6 col-md-3 isotope-item {% for categorie in project.categories.all %}{{ categorie.nom_traduction }} {% endfor %}">
+							{% endif %}
+
 								<div class="image-box">
 									<div class="overlay-container">
 
@@ -208,7 +217,11 @@
 
 											<span>
 											{% for categorie in project.categories.all %}
-											#{{ categorie }}
+												{% if langue == "fr" %}
+													#{{ categorie.nom }}
+												{% elif langue == "en" %}
+													#{{ categorie.nom_traduction }}	
+												{% endif %}
 											{% endfor %}
 											</span>
 
@@ -222,7 +235,17 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-{{ project.id }}-label">{{ project.titre }}</h4>
+
+												{% if langue == "fr" %}
+													<h4 class="modal-title" id="project-{{ project.id }}-label">
+													{{ project.titre }}
+													</h4>
+												{% elif langue == "en" %}
+													<h4 class="modal-title" id="project-{{ project.id }}-label">
+													{{ project.titre_traduction }}
+													</h4>
+												{% endif %}
+
 											</div>
 											<div class="modal-body">
 
@@ -234,7 +257,11 @@
 												
 												<div class="row">
 													<div class="col-md-6">
-														<p>{{ project.contenu }}</p>
+														{% if langue == "fr" %}
+															<p>{{ project.contenu }}</p>
+														{% elif langue == "en" %}
+															<p>{{ project.contenu_traduction }}</p>
+														{% endif %}
 													</div>
 
 													<div class="col-md-6">
@@ -449,7 +476,7 @@
 												{% elif langue == "en" %}
 													<strong>Other :</strong>
 												{% endif %}
-												
+
 												<ul>
 													<li>Création d'interfaces graphiques (QtCreator/Swing)</li>
 													<li>Maintenance informatique intérmédiaire</li>
