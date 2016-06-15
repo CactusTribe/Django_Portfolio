@@ -4,14 +4,14 @@ class Categorie(models.Model):
 	nom = models.CharField(max_length=30)
 	nom_traduction = models.CharField(max_length=30, null=True)
 
-	def __str__(self):
+	def __unicode__(self):
 		return self.nom
 
 class Tool(models.Model):
 	nom = models.CharField(max_length=30)
 	icon = models.ImageField(upload_to="icons_tools/")
 
-	def __str__(self):
+	def __unicode__(self):
 		return self.nom
 
 class Project(models.Model):
@@ -24,7 +24,7 @@ class Project(models.Model):
 	categories = models.ManyToManyField(Categorie)
 	tools = models.ManyToManyField(Tool)
 
-	def __str__(self):
+	def __unicode__(self):
 		return self.titre
 
 class Image(models.Model):
@@ -34,14 +34,14 @@ class Image(models.Model):
 	img = models.ImageField(upload_to="images/")
 	project = models.ForeignKey(Project)
 
-	def __str__(self):
+	def __unicode__(self):
 		return self.titre
 
 class IconFile(models.Model):
 	nom = models.CharField(max_length=30)
 	icon = models.ImageField(upload_to="icons_files/")
 
-	def __str__(self):
+	def __unicode__(self):
 		return self.nom
 
 class Resource(models.Model):
@@ -51,7 +51,7 @@ class Resource(models.Model):
 	type = models.ForeignKey(IconFile)
 	project = models.ForeignKey(Project)
 
-	def __str__(self):
+	def __unicode__(self):
 		return self.nom
 
 
