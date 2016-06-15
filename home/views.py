@@ -12,7 +12,7 @@ def home(request, langue="fr"):
 	categories = Categorie.objects.all()
 
 	if langue == "fr" :
-		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/LED_RGB.py", "40", "178", "135"])
+		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/LED_RGB.py", "0", "255", "198"])
 	else:
 		subprocess.Popen(["python3","/home/pi/pyprojects/Divers/LED_RGB.py", "215", "20", "0"])
 
