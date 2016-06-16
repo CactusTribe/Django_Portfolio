@@ -206,11 +206,16 @@
 								<div class="image-box">
 									<div class="overlay-container">
 
-										{% for image in images|getImagesProject:project.id %} 
-											{% if forloop.first %}
-												<img src="{{ image.img.url }}" alt="">
-											{% endif %}
-										{% endfor %}
+										{% if project.preview.url != None %}
+											<img src="{{ project.preview.url }}" alt="">
+										{% else %}
+											{% for image in images|getImagesProject:project.id %} 
+												{% if forloop.first %}
+													<img src="{{ image.img.url }}" alt="">
+												{% endif %}
+											{% endfor %}
+										{% endif %}
+										
 
 										<a class="overlay" data-toggle="modal" data-target="#project-{{ project.id }}">
 											<i class="fa fa-search-plus"></i>

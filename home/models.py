@@ -29,6 +29,7 @@ class Project(models.Model):
 	date = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Date de parution")
 	categories = models.ManyToManyField(Categorie)
 	tools = models.ManyToManyField(Tool)
+	preview = models.ImageField(upload_to="preview/", null=True)
 
 	def __unicode__(self):
 		return self.titre

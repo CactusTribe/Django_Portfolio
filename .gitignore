@@ -1,10 +1,11 @@
 db.sqlite3
 media/images/
 media/resources/
+media/preview/
 
 home/__pycache__/
-home/migrations/__pycache__/
-home/templatetags/__pycache__/
+home/migrations/
+home/templatetags/
 portfolio/__pycache__/
 portfolio/settings.py
 **/*.pyc
