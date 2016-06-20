@@ -269,9 +269,9 @@
 												<div class="row">
 													<div class="col-md-6">
 														{% if langue == "fr" %}
-															<p>{{ project.contenu }}</p>
+															<p>{{ project.contenu|safe }}</p>
 														{% elif langue == "en" %}
-															<p>{{ project.contenu_traduction }}</p>
+															<p>{{ project.contenu_traduction|safe }}</p>
 														{% endif %}
 													</div>
 
