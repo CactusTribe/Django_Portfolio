@@ -2,10 +2,14 @@
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="fr">
+<!--<html lang="fr">-->
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
 <!--<![endif]-->
 	<head>
-		<link rel="image_src" href="{% static 'images/banner.jpg' %}"/>
+		<meta property="og:image" content="{% static 'images/banner.jpg' %}" />
+		<!--<link rel="image_src" href="{% static 'images/banner.jpg' %}"/>-->
 
 		<meta charset="utf-8">
 		<title>Joaquim Lefranc</title>
