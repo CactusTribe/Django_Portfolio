@@ -28,6 +28,6 @@ exec gunicorn ${DJANGO_WSGI_MODULE}:application \
   --workers $NUM_WORKERS \
   --user=$USER --group=$GROUP \
   --bind=unix:$SOCKFILE \
-  --error-log=- \
+  --error-logfile=- \
 	--log-level=info \
-	--access-log=-
+	--access-logfile=-
