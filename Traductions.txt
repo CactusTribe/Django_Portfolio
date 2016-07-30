@@ -1,0 +1,33 @@
+Licence - Informatique, Université Paris VII - Diderot
+DEUG - Informatique, Université Paris VII - Diderot
+BTS CIG, Ecole Estienne Paris 13
+BAC CIG, Lycée Maximilien-Vox Paris 6
+BEP CIG, Lycée Maximilien-Vox Paris 6
+CIG: Communication et industries graphiques.
+
+2012 : Stage de 6sem. (B.G.O) Graphiste / Intégrateur InDesign
+2011 : Stage de 4sem. (Paris des Créateurs)Graphiste / Intégrateur Web
+2010 : Stage de 6sem. (Paris des Créateurs) Intégrateur / Développement Web
+2009 : Stage de 4sem. (Histoire & Collections)Intégrateur InDesign / Epreuvage numérique
+
+Compétences en apprentissage universitaire
+
+Compétences dans les Industries Graphiques
+
+PAO, traitement de l'image :
+Impression Offset / Numérique :
+Gestion d'un projet imprimé et coordination des différentes équipes
+Chaîne graphique
+Colorimétrie, calibration, contrôle qualité (PSO)
+Logiciels de contrôle en amont des PDF et flux CIP4
+EQuios TrueFlowSE et PitStopPro
+
+Compétences autodidactes
+
+Hébergement Web
+												
+Utilisation d'un moteur de recherche
+Bases d'électronique
+Programmation de micro-controleur (Arduino)
+Création d'interfaces graphiques (QtCreator/Swing)
+Maintenance informatique intérmédiaire
