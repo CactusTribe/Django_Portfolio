@@ -1,7 +1,15 @@
+Master 1 - Informatique, Université Paris VII - Diderot
+# Master 1 - Computer Science, University Paris VII - Diderot
+
 Licence - Informatique, Université Paris VII - Diderot
-DEUG - Informatique, Université Paris VII - Diderot
+# Licence - Computer Science, Université Paris VII - Diderot
+
 BTS CIG, Ecole Estienne Paris 13
+# BTS CIG, Estienne School Paris 13
+
 BAC CIG, Lycée Maximilien-Vox Paris 6
+# BAC CIG, Lycée Maximilien-Vox Paris 6
+
 BEP CIG, Lycée Maximilien-Vox Paris 6
 CIG: Communication et industries graphiques.
 
