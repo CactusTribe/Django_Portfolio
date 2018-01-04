@@ -30,6 +30,7 @@ class Project(models.Model):
 	categories = models.ManyToManyField(Categorie)
 	tools = models.ManyToManyField(Tool)
 	preview = models.ImageField(upload_to="preview/", null=True)
+	github = models.CharField(max_length=100, null=True)
 
 	def __unicode__(self):
 		return self.titre
@@ -72,5 +73,3 @@ class Resource(models.Model):
 
 	def __str__(self):
 		return self.nom
-
-
