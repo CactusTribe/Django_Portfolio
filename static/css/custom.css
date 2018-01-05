@@ -119,13 +119,13 @@ File Description: Place here your custom CSS styles
 
 .modal-body img{
 	transition:linear all 0.2s;
-	float: left;
+
 	max-height: 500px;
 }
 
 .modal-body .img-dark{
-	filter: brightness(30%);
-	max-height: 200px;
+	filter: brightness(50%);
+	max-height: 250px;
 }
 
 .modal-body img:hover{
