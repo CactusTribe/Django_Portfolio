@@ -117,17 +117,21 @@ File Description: Place here your custom CSS styles
   margin: 0px;
 }
 
-.modal-body .row img{
+.modal-body .preview{
 	transition:linear all 0.2s;
-	object-fit: cover; /* Do not scale the image */
-  object-position: center; /* Center the image within the element */
+	object-fit: cover;
+  object-position: center;
   width: 100%;
   max-height: 500px;
 }
 
 .modal-body .img-dark{
+	transition:linear all 0.2s;
 	filter: brightness(50%);
-	max-height: 200px;
+	object-fit: cover;
+  object-position: center;
+  width: 100%;
+	max-height: 250px;
 }
 
 .modal-body img:hover{
