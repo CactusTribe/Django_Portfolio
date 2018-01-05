@@ -1,0 +1,114 @@
+{% load static home_extras%}
+<div class="col-md-6">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Compétences en apprentissage universitaire
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+
+          <strong>Langages :</strong>
+          <ul>
+            <li>Java, Python, C, C++, OCaml</li>
+            <li>SQL, Javascript, PHP, HTML/CSS</li>
+          </ul>
+
+          <strong>Frameworks / Libs :</strong>
+          <ul>
+            <li>Symfony, NodeJS, jQuery, BootSrap</li>
+            <li>SDL, SDL_gfx, JavaFX</li>
+            <li>Tensorflow, Scipy</li>
+          </ul>
+
+          <strong>Databases :</strong>
+          <ul>
+            <li>MySQL, PGSql, phpMyAdmin, SQLite3</li>
+          </ul>
+
+          {% if langue == "fr" %}
+            <strong>Autres :</strong>
+          {% elif langue == "en" %}
+            <strong>Other :</strong>
+          {% endif %}
+
+          <ul>
+            <li>Shell Unix</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Compétences dans les Industries Graphiques
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+
+          <strong>PAO, traitement de l'image :</strong>
+          <ul>
+            <li>Photoshop, Illustrator, InDesign, Acrobat</li>
+          </ul>
+
+          <strong>Impression Offset / Numérique :</strong>
+          <ul>
+            <li>Gestion d'un projet imprimé et coordination des différentes équipes</li>
+            <li>Chaîne graphique</li>
+            <li>Colorimétrie, calibration, contrôle qualité (PSO)</li>
+            <li>Logiciels de contrôle en amont des PDF et flux CIP4</li>
+            <li>EQuios TrueFlowSE et PitStopPro</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Compétences autodidactes
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+
+          <strong>Web :</strong>
+          <ul>
+            <li>Django</li>
+            <li>Hébergement Web</li>
+            <li>Utilisation d'un moteur de recherche</li>
+          </ul>
+
+          <strong>Electronique :</strong>
+          <ul>
+            <li>Bases d'électronique</li>
+            <li>Programmation de micro-controleur C (ATMega)</li>
+          </ul>
+
+          {% if langue == "fr" %}
+            <strong>Autres :</strong>
+          {% elif langue == "en" %}
+            <strong>Other :</strong>
+          {% endif %}
+
+          <ul>
+            <li>Création d'interfaces graphiques (Qt/Swing)</li>
+            <li>Maintenance informatique intérmédiaire</li>
+            <li>OSX et Linux</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

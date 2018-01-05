@@ -1,0 +1,51 @@
+{% load static home_extras%}
+<!-- portfolio items start -->
+<div class="isotope-container row grid-space-20">
+
+  {% for project in projects reversed %}
+
+  {% if langue == "fr" %}
+    <div class="col-sm-6 col-md-3 isotope-item {% for categorie in project.categories.all %}{{ categorie.nom }} {% endfor %}">
+  {% elif langue == "en" %}
+    <div class="col-sm-6 col-md-3 isotope-item {% for categorie in project.categories.all %}{{ categorie.nom_traduction }} {% endfor %}">
+  {% endif %}
+
+    <div class="image-box">
+      <div class="overlay-container">
+
+        {% if project.preview.url != None %}
+          <img src="{{ project.preview.url }}" alt="">
+        {% else %}
+          {% for image in images|getImagesProject:project.id %}
+            {% if forloop.first %}
+              <img src="{{ image.img.url }}" alt="">
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <a class="overlay" data-toggle="modal" data-target="#project-{{ project.id }}">
+          <i class="fa fa-search-plus"></i>
+            <span>
+            {% for categorie in project.categories.all %}
+              {% if langue == "fr" %}
+                #{{ categorie.nom }}
+              {% elif langue == "en" %}
+                #{{ categorie.nom_traduction }}
+              {% endif %}
+            {% endfor %}
+            </span>
+        </a>
+      </div>
+
+      {% if langue == "fr" %}
+        <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-{{ project.id }}">{{ project.titre }}</a>
+      {% elif langue == "en" %}
+        <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-{{ project.id }}">{{ project.titre_traduction }}</a>
+      {% endif %}
+    </div>
+
+    {% include "window_project.html" %}
+    </div>
+  {% endfor %}
+</div>
+<!-- portfolio items end -->

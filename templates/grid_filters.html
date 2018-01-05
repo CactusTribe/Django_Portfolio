@@ -1,0 +1,23 @@
+{% load static home_extras%}
+
+<!-- isotope filters start -->
+<div class="filters text-center">
+  <ul class="nav nav-pills">
+
+    {% if langue == "fr" %}
+      <li class="active"><a href="#" data-filter="*">Tout</a></li>
+    {% elif langue == "en" %}
+      <li class="active"><a href="#" data-filter="*">All</a></li>
+    {% endif %}
+
+    {% for categorie in categories %}
+      {% if langue == "fr" %}
+        <li><a href="#" data-filter=".{{ categorie.nom }}">{{ categorie.nom }}</a></li>
+      {% elif langue == "en" %}
+        <li><a href="#" data-filter=".{{ categorie.nom_traduction }}">{{ categorie.nom_traduction }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+  </ul>
+</div>
+<!-- isotope filters end -->

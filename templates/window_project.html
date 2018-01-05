@@ -1,0 +1,93 @@
+{% load static home_extras%}
+<!-- Modal -->
+<div class="modal fade" id="project-{{ project.id }}" tabindex="-1" role="dialog" aria-labelledby="project-{{ project.id }}-label" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+        {% if langue == "fr" %}
+          <h4 class="modal-title" id="project-{{ project.id }}-label">
+          {{ project.titre }}
+          </h4>
+        {% elif langue == "en" %}
+          <h4 class="modal-title" id="project-{{ project.id }}-label">
+          {{ project.titre_traduction }}
+          </h4>
+        {% endif %}
+
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-md-6">
+            {% if langue == "fr" %}
+              <p>{{ project.contenu|safe }}</p>
+            {% elif langue == "en" %}
+              <p>{{ project.contenu_traduction|safe }}</p>
+            {% endif %}
+
+            {% if project.github != None %}
+            <a href="{{ project.github }}"><img src="{% static 'images/git_logo.png' %}" width="64" height="64"/></a>
+            {% endif %}
+          </div>
+
+          <div class="col-md-6">
+            {% for image in images|getImagesProject:project.id %}
+
+                {% if langue == "fr" %}
+                  <a {% if not forloop.first %} hidden {% endif %} href="{{ image.img.url }}" class="swipebox" title="{{ image.description }}" rel="{{ project.id }}">
+                    <img src="{{ image.img.url }}" />
+                  </a>
+                {% elif langue == "en" %}
+                  <a {% if not forloop.first %} hidden {% endif %} href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
+                    <img src="{{ image.img.url }}" />
+                  </a>
+                {% endif %}
+
+            {% endfor %}
+          </div>
+        </div>
+
+        {% if langue == "fr" %}
+          <h4>Outils utilisés</h4>
+        {% elif langue == "en" %}
+          <h4>Used tools</h4>
+        {% endif %}
+
+        <div class="block_icons_tools">
+          {% for tool in project.tools.all %}
+            <img class="logo_tools" src="{{ tool.icon.url }}"/>
+          {% endfor %}
+        </div>
+
+        {% if langue == "fr" %}
+          <h4>Ressources</h4>
+        {% elif langue == "en" %}
+          <h4>Resources</h4>
+        {% endif %}
+
+        <div class="block_liens">
+        {% for resource in resources %}
+          {% if resource.project.id == project.id %}
+
+            <div id="button">
+              <a href="{{ resource.fichier.url }}">
+                <img id="icon_button" src="{{ resource.type.icon.url }}"/>
+                <div id="title_button">{{ resource.nom }}.{{ resource.type.nom }}</div>
+                <div id="subtitle_button">Version {{ resource.version }}</div>
+              </a>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal end -->

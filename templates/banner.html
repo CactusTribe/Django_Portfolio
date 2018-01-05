@@ -1,0 +1,25 @@
+{% load static home_extras%}
+<!-- banner start -->
+<!-- ================ -->
+<div id="banner" class="banner">
+  <div class="banner-image"></div>
+  <div class="banner-caption">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+
+          {% if langue == "fr" %}
+          <h1 class="text-center">Bienvenue.</h1>
+          <p class="lead text-center"><em>Actuellement étudiant en Master Informatique, ce site est conçu afin de répertorier les projets universitaires et personnels auxquels j'ai pu participer, ou ceux que j'ai pu créer de toutes pièces.</em></p>
+
+          {% elif langue == "en" %}
+          <h1 class="text-center">Welcome.</h1>
+          <p class="lead text-center"><em>Currently undergraduate in computer science, this website is designed in order to list my personal and university projects in which I participated, or those that I created by myself.</em></p>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner end -->
