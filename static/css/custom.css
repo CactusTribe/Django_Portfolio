@@ -14,7 +14,7 @@ File Description: Place here your custom CSS styles
   margin-top: 5px;
   margin-right: 5px;
   margin-left: 5px;
-  height: 70px;
+  height: 50px;
 }
 
 .block_icons_tools
@@ -94,4 +94,56 @@ File Description: Place here your custom CSS styles
   float: left;
   margin-left: 5px;
   font-size: 0.8em;
+}
+
+.image-box{
+	border: 3px solid #CCC;
+	border-radius: 2px;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.no-margin
+{
+  margin: 0px;
+}
+
+.modal-body img{
+	transition:linear all 0.2s;
+	float: left;
+	max-height: 500px;
+}
+
+.modal-body .img-dark{
+	filter: brightness(30%);
+	max-height: 200px;
+}
+
+.modal-body img:hover{
+	filter: brightness(100%);
+}
+
+.git_logo{
+	width: 40px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.modal-title{
+	display: inline-block;
+}
+
+.date_project{
+	font-style: normal;
+	font-weight: 300;
+	margin-left: 10px;
 }
