@@ -674,7 +674,7 @@ textarea {
 	position: relative;
 	display: block;
 	overflow: hidden;
-	transition: .2s all;
+	transition: .1s all;
 }
 
 .overlay-container:hover img{
@@ -692,12 +692,12 @@ textarea {
 	cursor: pointer;
 	overflow: hidden;
 	opacity: 0;
-	transition: .2s all;
+	transition: .1s all;
 }
 .overlay:hover {
 	text-decoration: none;
 	opacity: 1;
-	border: 3px solid #CCC;
+	border: 2px solid white;
 }
 .overlay span {
 	position: absolute;
