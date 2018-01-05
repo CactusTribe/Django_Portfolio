@@ -36,7 +36,7 @@
               {% elif langue == "en" %}
                 <a href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
               {% endif %}
-                  <img class="img-responsive preview" src="{{ image.img.url }}" />
+                  <img class="preview" src="{{ image.img.url }}" />
                 </a>
                 <br/>
             </div>
@@ -50,7 +50,7 @@
               {% elif langue == "en" %}
                 <a href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
               {% endif %}
-                  <img class="img-responsive img-dark" src="{{ image.img.url }}" />
+                  <img class="img-dark" src="{{ image.img.url }}" />
                 </a>
             {% endfor %}
           </div>
