@@ -95,3 +95,8 @@ File Description: Place here your custom CSS styles
   margin-left: 5px;
   font-size: 0.8em;
 }
+
+.image-box{
+	border: 3px solid #CCC;
+	border-radius: 2px;
+}
