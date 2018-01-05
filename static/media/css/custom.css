@@ -104,6 +104,7 @@ File Description: Place here your custom CSS styles
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
+	max-height: 600px;
 }
 
 .row.no-gutter [class*='col-']:not(:first-child),
