@@ -122,7 +122,7 @@ blockquote {
 ----------------------------------------------------------------------------- */
 .header {
 	color: #ffffff;
-	background-color: rgba(0, 0, 0, 0.50);
+	background-color: rgba(0, 0, 0, 0.75);
 	padding: 10px 0;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -477,8 +477,9 @@ textarea {
 .main-navigation .navbar-default .navbar-nav > li > a {
 	color: #fff;
 	padding: 10px 20px;
-	font-size: 18px;
-	font-weight: 300;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.8;
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
 	background-color: transparent;
