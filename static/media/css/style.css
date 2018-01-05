@@ -478,16 +478,17 @@ textarea {
 	color: #fff;
 	padding: 10px 20px;
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.8;
+	font-style: italic;
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
 	background-color: transparent;
-	color: #55acee;
+	color: #00ffcc;
 }
 .main-navigation .navbar-default .navbar-nav > li > a:hover,
 .main-navigation .navbar-default .navbar-nav > li.active > a:hover {
-	color: #55acee;
+	color: #00ffcc;
 }
 @media (min-width:768px) {
 	.main-navigation .navbar-default .navbar-nav > li > a {
