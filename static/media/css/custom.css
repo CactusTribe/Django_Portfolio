@@ -104,7 +104,6 @@ File Description: Place here your custom CSS styles
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
-	max-height: 600px;
 }
 
 .row.no-gutter [class*='col-']:not(:first-child),
@@ -121,10 +120,12 @@ File Description: Place here your custom CSS styles
 .modal-body img{
 	transition:linear all 0.2s;
 	float: left;
+	max-height: 500px;
 }
 
 .modal-body .img-dark{
 	filter: brightness(30%);
+	max-height: 200px;
 }
 
 .modal-body img:hover{
