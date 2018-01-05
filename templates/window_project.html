@@ -59,7 +59,7 @@
         <hr/>
 
         <div class="row">
-          <div class="col-md-10">
+          <div class="col-md-8">
             <h4>Description</h4>
             {% if langue == "fr" %}
               <p>{{ project.contenu|safe }}</p>
@@ -67,21 +67,24 @@
               <p>{{ project.contenu_traduction|safe }}</p>
             {% endif %}
           </div>
+
+          <div class="col-md-4">
+            {% if langue == "fr" %}
+              <h4>Outils utilisés</h4>
+            {% elif langue == "en" %}
+              <h4>Used tools</h4>
+            {% endif %}
+
+            <div class="block_icons_tools">
+              {% for tool in project.tools.all %}
+                <img class="logo_tools" src="{{ tool.icon.url }}"/>
+              {% endfor %}
+            </div>
+          </div>
+
         </div>
 
         <hr/>
-
-        {% if langue == "fr" %}
-          <h4>Outils utilisés</h4>
-        {% elif langue == "en" %}
-          <h4>Used tools</h4>
-        {% endif %}
-
-        <div class="block_icons_tools">
-          {% for tool in project.tools.all %}
-            <img class="logo_tools" src="{{ tool.icon.url }}"/>
-          {% endfor %}
-        </div>
 
         {% if langue == "fr" %}
           <h4>Ressources</h4>
