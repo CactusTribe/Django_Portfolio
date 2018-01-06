@@ -55,7 +55,6 @@
         </div>
 
 
-
         <div class="row">
           <div class="col-md-8">
             <h4>Description</h4>
@@ -79,32 +78,22 @@
               {% endfor %}
             </div>
           </div>
-
         </div>
 
-        <hr/>
-
-        {% if langue == "fr" %}
-          <h4>Ressources</h4>
-        {% elif langue == "en" %}
-          <h4>Resources</h4>
+        {% if resources|getResourcesProject:project.id|length > 0 %}
+          <hr/>
+          <div class="block_liens">
+            {% for resource in resources|getResourcesProject:project.id %}
+                <div id="button">
+                  <a href="{{ resource.fichier.url }}">
+                    <img id="icon_button" src="{{ resource.type.icon.url }}"/>
+                    <div id="title_button">{{ resource.nom }}.{{ resource.type.nom }}</div>
+                    <div id="subtitle_button">Version {{ resource.version }}</div>
+                  </a>
+                </div>
+            {% endfor %}
+          </div>
         {% endif %}
-
-        <div class="block_liens">
-        {% for resource in resources %}
-          {% if resource.project.id == project.id %}
-
-            <div id="button">
-              <a href="{{ resource.fichier.url }}">
-                <img id="icon_button" src="{{ resource.type.icon.url }}"/>
-                <div id="title_button">{{ resource.nom }}{{ resource.type.nom }}</div>
-                <div id="subtitle_button">Version {{ resource.version }}</div>
-              </a>
-            </div>
-
-          {% endif %}
-        {% endfor %}
-        </div>
 
       </div>
       <div class="modal-footer">
