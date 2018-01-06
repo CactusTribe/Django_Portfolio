@@ -43,13 +43,19 @@
           <!-- OTHERS IMAGES -->
           <div class="col-xs-4 col-md-4">
             {% for image in images|getImagesProject:project.id|slice:"1:3" %}
-              {% if langue == "fr" %}
-                <a href="{{ image.img.url }}" class="swipebox" title="{{ image.description }}" rel="{{ project.id }}">
-              {% elif langue == "en" %}
-                <a href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
-              {% endif %}
-                  <img class="img-dark" src="{{ image.img.url }}" />
-                </a>
+                {% if langue == "fr" %}
+                  <a href="{{ image.img.url }}" class="swipebox" title="{{ image.description }}" rel="{{ project.id }}">
+                {% elif langue == "en" %}
+                  <a href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
+                {% endif %}
+                    <img class="img-dark" src="{{ image.img.url }}" />
+                  </a>
+            {% endfor %}
+
+            {% for image in images|getImagesProject:project.id|slice:"3:" %}
+              <a hidden href="{{ image.img.url }}" class="swipebox" title="{{ image.description_traduction }}" rel="{{ project.id }}">
+                <img class="img-dark" src="{{ image.img.url }}" />
+              </a>
             {% endfor %}
           </div>
         </div>
