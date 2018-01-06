@@ -135,7 +135,7 @@ File Description: Place here your custom CSS styles
 	max-height: 200px;
 }
 
-.modal-body img:hover{
+.modal-body .img-dark:hover{
 	filter: brightness(100%);
 }
 
