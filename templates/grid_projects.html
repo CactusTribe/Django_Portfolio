@@ -16,10 +16,8 @@
         {% if project.preview.url != None %}
           <img src="{{ project.preview.url }}" alt="">
         {% else %}
-          {% for image in images|getImagesProject:project.id %}
-            {% if forloop.first %}
-              <img src="{{ image.img.url }}" alt="">
-            {% endif %}
+          {% for image in images|getImagesProject:project.id|slice:":1" %}
+            <img src="{{ image.img.url }}" alt="">
           {% endfor %}
         {% endif %}
 
