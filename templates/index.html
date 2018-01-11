@@ -161,23 +161,25 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
 		<!-- JavaScript files placed at the end of the document so the pages load faster
 		================================================== -->
 		<!-- SwipBox -->
-		<script src="{% static 'lib/jquery-2.1.0.min.js' %}"></script>
-		<script src="{% static 'lib/ios-orientationchange-fix.js' %}"></script>
-		<script src="{% static 'src/js/jquery.swipebox.js' %}"></script>
+		<script src="{% static 'lib/jquery-2.1.0.min.js' %}" async></script>
+		<script src="{% static 'lib/ios-orientationchange-fix.js' %}" async></script>
+		<script src="{% static 'src/js/jquery.swipebox.min.js' %}" async></script>
 
 		<!-- Jquery and Bootstap core js files -->
 		<!-- <script type="text/javascript" src="{% static 'plugins/jquery.min.js' %}"></script> -->
-		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}" async></script>
 		<!-- Modernizr javascript -->
-		<script type="text/javascript" src="{% static 'plugins/modernizr.js' %}"></script>
+		<script type="text/javascript" src="{% static 'plugins/modernizr.js' %}" ></script>
 		<!-- Isotope javascript -->
-		<script type="text/javascript" src="{% static 'plugins/isotope/isotope.pkgd.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'plugins/isotope/isotope.pkgd.min.js' %}" ></script>
 		<!-- Backstretch javascript -->
-		<script type="text/javascript" src="{% static 'plugins/jquery.backstretch.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'plugins/jquery.backstretch.min.js' %}" ></script>
+
 		<script type="text/javascript">
 			$(".banner-image").backstretch('{% static 'images/banner.jpg' %}');
 			$( '.swipebox' ).swipebox();
 		</script>
+
 		<!-- Appear javascript -->
 		<script type="text/javascript" src="{% static 'plugins/jquery.appear.js' %}"></script>
 		<!-- Initialization of Plugins -->
